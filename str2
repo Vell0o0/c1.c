@@ -1,0 +1,92 @@
+/*
+scanf("%d", &(s.number));
+    scanf("%s", s.name); // &사용X ==> 배열
+    scanf("%lf", &(s.grade));
+
+    printf("학번: %d\n이름: %s\n성적: %.2f\n", s.number, s.name, s.grade);
+*/
+
+/*
+struct student s;
+
+    struct student s1 = {2020101234, "Kim", 4.3};
+    struct student s2 = {2020104567, "Park", 4.2};
+    struct student *p;
+
+    p = &s1;
+
+    printf("%d, %s, %f\n", s2.number, s2.name, s2.grade);
+
+    printf("%d, %s, %f\n", s1.number, (*p).name, p->grade);
+
+    s2 = s1;
+
+    printf("%d, %s, %f\n", s2.number, s2.name, s2.grade);
+*/
+
+/*
+struct student
+{
+    int number;
+    char name[20];
+    double grade;
+};
+struct date
+{
+    int month;
+    int year;
+    int day;
+};
+
+struct point
+{
+    int x;
+    int y;
+};
+
+struct point p1, p2, p3;
+
+typedef struct point orth;//date type "orth"
+
+orth p4, p5;
+
+struct 
+{
+    orth o;
+    double r;
+} cir1, cir2; //구조체 이름이 아니라 변수로 선언
+
+typedef struct 
+{
+    orth ll;
+    orth ur;
+} Rect;
+
+Rect r1, r2;
+*/
+
+//union
+/*
+union aa
+{
+    int n;
+    double x;
+};
+union bb
+{
+    int m;
+    unsigned char b[20]; 
+};
+
+union aa a;
+    union bb b;
+
+    printf("%p, %p, %p\n", &a, &a.n, &a.x);
+    printf("size = %d\n", sizeof a);
+    printf("%p, %p, %p\n", &b, b.b, &b.m);
+    printf("size = %d\n", sizeof b);
+
+    b.m = 0x12345678; // little endian
+    printf("%x|%x|%x|%x\n", b.b[0], b.b[1], b.b[2], b.b[3]);
+
+*/
